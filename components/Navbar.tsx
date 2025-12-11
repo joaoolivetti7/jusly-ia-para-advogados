@@ -105,8 +105,17 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="mt-auto grid gap-4">
-            <Button variant="outline" className="w-full justify-center py-4 text-lg">Entrar</Button>
-            <Button variant="primary" className="w-full justify-center py-4 text-lg">Começar Grátis</Button>
+            <Button variant="outline" className="w-full justify-center py-4 text-lg" onClick={handleClickEnter}>Entrar</Button>
+            <Button
+              variant="primary"
+              className="w-full justify-center py-4 text-lg"
+              onClick={() => {
+                scrollToPricing();
+                setIsMobileMenuOpen(false);
+              }}
+            >
+              Assinar Agora
+            </Button>
           </div>
         </div>
       </div>

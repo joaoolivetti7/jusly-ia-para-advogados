@@ -110,7 +110,7 @@ const Hero: React.FC = () => {
           <span className="hidden sm:block text-gray-700">•</span>
           <div className="flex items-center gap-2 text-xs md:text-sm">
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            Instalação em 2 min
+            Instalação em 15 min
           </div>
         </div>
 
