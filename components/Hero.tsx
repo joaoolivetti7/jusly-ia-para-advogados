@@ -1,18 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import { Play, MessageSquare, ShieldCheck, Sparkles, X } from 'lucide-react';
+import React from 'react';
+import { Play, MessageSquare, ShieldCheck, Sparkles } from 'lucide-react';
 import Button from './Button';
 
 const Hero: React.FC = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  // Close video on Escape key press
-  useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsVideoOpen(false);
-    };
-    window.addEventListener('keydown', handleEsc);
-    return () => window.removeEventListener('keydown', handleEsc);
-  }, []);
+  const scrollToVideo = () => {
+    const videoElement = document.getElementById('demo-video');
+    if (videoElement) {
+      videoElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  const scrollToPricing = () => {
+    const pricingElement = document.getElementById('pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <section className="relative pt-28 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -33,81 +37,56 @@ const Hero: React.FC = () => {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-6 leading-tight max-w-4xl mx-auto">
-          Seu Escritório no <br />
+          IA para advogados que <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-indigo-400">
-            Piloto Automático
+            fecha contrato sozinha e agenda reuniões
           </span>
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-gray-400 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-4">
-          A IA que atende seus clientes, agenda consultas e organiza seus processos.
-          Recupere seu tempo e foque no que realmente importa: <span className="text-white font-medium">Ganhar causas.</span>
+          A Jusly atende seu cliente, analisa a viabilidade, fecha contrato, colhe assinatura e documentos e agenda reunião na sua agenda. <span className="text-white font-medium">Tudo isso 24hrs por dia!</span>
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-20 px-4">
-          <Button size="lg" className="w-full sm:w-auto group">
-            Começar Gratuitamente
+          <Button size="lg" className="w-full sm:w-auto group" onClick={scrollToPricing}>
+            Assinar Agora
             <Sparkles className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
           </Button>
           <Button
             variant="outline"
             size="lg"
             className="w-full sm:w-auto"
-            onClick={() => setIsVideoOpen(true)}
+            onClick={scrollToVideo}
           >
             <Play className="mr-2 w-4 h-4 fill-current" /> Ver Demonstração
           </Button>
         </div>
 
-        {/* Hero Image / Mockup */}
-        <div className="relative max-w-5xl mx-auto px-2 md:px-4">
+        {/* Hero Image / Mockup / Video Container */}
+        <div id="demo-video" className="relative max-w-5xl mx-auto px-2 md:px-4">
           {/* Main Interface */}
           <div className="relative rounded-xl md:rounded-2xl border border-white/10 bg-gray-900/50 backdrop-blur-sm shadow-2xl overflow-hidden aspect-video group">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/80 z-10 pointer-events-none" />
 
             {/* Mock Dashboard Top Bar */}
-            <div className="h-8 md:h-10 border-b border-white/10 flex items-center px-4 space-x-2 bg-black/40">
+            <div className="absolute top-0 left-0 right-0 z-20 h-8 md:h-10 border-b border-white/10 flex items-center px-4 space-x-2 bg-black/80 backdrop-blur-sm">
               <div className="w-2.5 h-2.5 rounded-full bg-red-500/50" />
               <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/50" />
               <div className="w-2.5 h-2.5 rounded-full bg-green-500/50" />
               <div className="ml-4 h-2 w-24 md:w-32 bg-white/10 rounded-full" />
             </div>
 
-            {/* Background Image inside mockup */}
-            {/* Background Image inside mockup */}
-            <img
-              src="/first-image.jpg"
-              alt="Dashboard Preview"
-              className="w-full h-full object-contain opacity-60 group-hover:scale-105 transition-transform duration-700"
-            />
-
-            {/* Floating Notification Card - Hidden on mobile, visible on tablet+ */}
-            <div className="hidden md:block absolute top-1/4 right-8 lg:right-16 z-20 animate-float">
-              <div className="bg-gray-900/90 backdrop-blur-xl border border-primary-500/30 p-4 rounded-xl shadow-2xl max-w-xs w-full">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center shrink-0">
-                    <MessageSquare className="w-5 h-5 text-green-400" />
-                  </div>
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-semibold px-2 py-0.5 rounded bg-green-500/20 text-green-400">Novo Lead</span>
-                      <span className="text-xs text-gray-500">Agora</span>
-                    </div>
-                    <h4 className="font-medium text-white text-sm">Roberto Silva</h4>
-                    <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                      "Gostaria de agendar uma consultoria sobre direito trabalhista..."
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Floating Trust Badge */}
-            <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8 z-20 hidden sm:flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-black/60 backdrop-blur-md rounded-full border border-white/5">
-              <ShieldCheck className="w-3 h-3 md:w-4 md:h-4 text-primary-400" />
-              <span className="text-[10px] md:text-xs text-gray-300">LGPD Compliant & Criptografado</span>
+            {/* YouTube Video Iframe */}
+            <div className="w-full h-full pt-8 md:pt-10 bg-black">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/rCOpOIhZ55U"
+                title="Demonstração Jusly"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
           </div>
@@ -136,34 +115,6 @@ const Hero: React.FC = () => {
         </div>
 
       </div>
-
-      {/* Video Modal Overlay */}
-      {isVideoOpen && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md p-4 animate-in fade-in duration-200"
-          onClick={() => setIsVideoOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-white/10"
-            onClick={(e) => e.stopPropagation()} // Prevent close when clicking inside the video wrapper
-          >
-            <button
-              className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-colors"
-              onClick={() => setIsVideoOpen(false)}
-            >
-              <X size={24} />
-            </button>
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/rCOpOIhZ55U?autoplay=1"
-              title="Demonstração Jusly"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

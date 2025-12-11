@@ -7,6 +7,7 @@ import Pricing from './components/Pricing';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import Testimonials from './components/Testimonials';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Stats />
         <Features />
         <Pricing />
+        <Testimonials />
         <CTA />
       </main>
       <Footer />

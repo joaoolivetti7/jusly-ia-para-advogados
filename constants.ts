@@ -54,7 +54,7 @@ export const PRICING_PLANS = [
       '3 Conexões de Whatsapp'
     ],
     highlight: false,
-    cta: 'Falar com Consultor'
+    cta: 'Começar Agora'
   }
 ];
 
@@ -62,7 +62,22 @@ export const TESTIMONIALS = [
   {
     name: "Dr. Roberto Silva",
     role: "Advogado Trabalhista",
-    content: "Gostaria de agendar uma consultoria sobre direito trabalhista...",
-    avatar: "https://picsum.photos/seed/roberto/100/100"
+    content: "A Jusly revolucionou o atendimento do meu escritório. Antes eu perdia horas qualificando leads curiosos. Agora, só falo com quem já está pronto para fechar. O faturamento aumentou 40% no primeiro mês.",
+    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    rating: 5
+  },
+  {
+    name: "Dra. Mariana Costa",
+    role: "Direito de Família",
+    content: "A funcionalidade de agendamento automático é sensacional. Acordo todos os dias com minha agenda cheia de clientes qualificados. A interface é linda e muito fácil de usar.",
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    rating: 5
+  },
+  {
+    name: "Dr. Carlos Eduardo",
+    role: "Sócio Sênior - C&E Advogados",
+    content: "Estávamos céticos quanto ao uso de IA, mas a Jusly nos surpreendeu. O tom de voz é extremamente natural e o fechamento de contratos simples funciona perfeitamente. Recomendo para qualquer banca.",
+    avatar: "https://randomuser.me/api/portraits/men/85.jpg",
+    rating: 5
   }
 ];

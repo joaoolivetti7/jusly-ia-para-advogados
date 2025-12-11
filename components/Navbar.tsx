@@ -24,12 +24,23 @@ const Navbar: React.FC = () => {
     }
   }, [isMobileMenuOpen]);
 
+  const handleClickEnter = () => {
+    window.open('https://app.jusly.com.br', '_blank');
+  }
+
+  const scrollToPricing = () => {
+    const pricingElement = document.getElementById('pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isMobileMenuOpen
-        ? 'bg-black'
-        : isScrolled
-          ? 'bg-black/80 backdrop-blur-md border-b border-white/10'
-          : 'bg-transparent'
+      ? 'bg-black'
+      : isScrolled
+        ? 'bg-black/80 backdrop-blur-md border-b border-white/10'
+        : 'bg-transparent'
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 relative z-50">
@@ -60,8 +71,8 @@ const Navbar: React.FC = () => {
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">Entrar</Button>
-            <Button variant="primary" size="sm">Começar Grátis</Button>
+            <Button onClick={handleClickEnter} variant="ghost" size="sm">Entrar</Button>
+            <Button onClick={scrollToPricing} variant="primary" size="sm">Assinar Agora</Button>
           </div>
 
           {/* Mobile Menu Button */}
