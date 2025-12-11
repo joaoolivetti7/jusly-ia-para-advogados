@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
             setIsMobileMenuOpen(false);
           }}>
             <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center mr-3">
-              <Scale className="w-6 h-6 text-white" />
+              <img src="/logo.png" alt="Jusly Logo" className="w-20 h-10" />
             </div>
             <span className="text-2xl font-bold tracking-tight text-white">Jusly</span>
           </div>

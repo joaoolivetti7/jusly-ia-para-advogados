@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <div className="col-span-2 lg:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-8 h-8 bg-primary-600 rounded flex items-center justify-center">
-                <Scale className="w-5 h-5 text-white" />
+                <img src="/logo.png" alt="Jusly Logo" className="w-20 h-8" />
               </div>
               <span className="text-xl font-bold text-white">Jusly</span>
             </div>
