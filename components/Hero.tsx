@@ -114,6 +114,13 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
+        <div className="mt-12 md:mt-12 flex items-center justify-center w-full px-4">
+          <Button size="lg" className="w-full sm:w-auto group" onClick={scrollToPricing}>
+            Assinar Agora
+            <Sparkles className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
+          </Button>
+        </div>
+
       </div>
     </section>
   );

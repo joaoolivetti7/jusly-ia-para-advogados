@@ -66,7 +66,7 @@ const Features: React.FC = () => {
               <img
                 src="/five-image.jpeg"
                 alt="AI Contract Closing"
-                className="w-full h-full object-contain hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-contain scale-[101%] hover:scale-[105%] transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                 <span className="opacity-0 group-hover:opacity-100 text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm transition-opacity">Ampliar</span>
@@ -86,7 +86,7 @@ const Features: React.FC = () => {
               <img
                 src="/second-image.jpeg"
                 alt="CRM Interface"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover scale-[101%] hover:scale-[105%] transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                 <span className="opacity-0 group-hover:opacity-100 text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm transition-opacity">Ampliar</span>
@@ -152,7 +152,7 @@ const Features: React.FC = () => {
               <img
                 src="/third-image.jpeg"
                 alt="Analytics Dashboard"
-                className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover scale-[101%] opacity-80 hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                 <span className="opacity-0 group-hover:opacity-100 text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm transition-opacity">Ampliar</span>
@@ -172,7 +172,7 @@ const Features: React.FC = () => {
               <img
                 src="/fourth-image.jpeg"
                 alt="AI FAQ"
-                className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover scale-[101%] opacity-80 hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                 <span className="opacity-0 group-hover:opacity-100 text-white font-medium bg-black/50 px-4 py-2 rounded-full backdrop-blur-sm transition-opacity">Ampliar</span>
@@ -225,7 +225,7 @@ const Features: React.FC = () => {
             <img
               src={selectedImage}
               alt="Expanded Feature"
-              className="w-auto h-auto max-w-full max-h-[90vh] rounded-lg shadow-2xl border border-white/10"
+              className="w-auto h-auto max-w-full max-h-[90vh] rounded-lg shadow-2xl border border-white/10 "
             />
           </div>
         </div>

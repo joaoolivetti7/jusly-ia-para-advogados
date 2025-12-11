@@ -3,14 +3,13 @@ import { Check, MessageSquare, BarChart3, Users, Zap, Shield, Clock } from 'luci
 export const NAV_LINKS = [
   { name: 'Funcionalidades', href: '#features' },
   { name: 'Preços', href: '#pricing' },
-  { name: 'Sobre', href: '#about' },
 ];
 
 export const STATS = [
-  { value: '98%', label: 'Taxa de Resposta', icon: Zap },
-  { value: '24/7', label: 'Disponibilidade', icon: Clock },
-  { value: '+300%', label: 'Aumento em Leads', icon: BarChart3 },
-  { value: '2min', label: 'Tempo de Resposta Médio', icon: MessageSquare },
+  { value: '98%', label: 'Taxa de Satisfação', icon: Zap },
+  { value: '24h', label: 'Por Dia', icon: Clock },
+  { value: '+300%', label: 'Aumento de Fechamento', icon: BarChart3 },
+  { value: '15min', label: 'Tempo de Instalação', icon: MessageSquare },
 ];
 
 export const PRICING_PLANS = [

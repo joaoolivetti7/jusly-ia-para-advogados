@@ -4,7 +4,7 @@ import { STATS } from '../constants';
 const Stats: React.FC = () => {
   return (
     <section className="border-y border-white/5 bg-white/[0.02]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {STATS.map((stat, index) => {
             const Icon = stat.icon;
