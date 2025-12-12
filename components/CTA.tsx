@@ -3,6 +3,10 @@ import Button from './Button';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
 const CTA: React.FC = () => {
+  const handleClickButton = () => {
+    window.open('https://wa.me/5541963475301?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Jusly%20e%20gostaria%20de%20conhecer%20a%20IA%20que%20fecha%20contrato%20sozinha.', '_blank');
+  }
+
   return (
     <section className="py-16 md:py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-900/20 pointer-events-none" />
@@ -18,7 +22,7 @@ const CTA: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="w-full sm:w-auto px-8 md:px-12 h-12 md:h-14 text-base md:text-lg">
+          <Button onClick={handleClickButton} size="lg" className="w-full sm:w-auto px-8 md:px-12 h-12 md:h-14 text-base md:text-lg">
             <MessageCircle className="mr-2 w-5 h-5" /> Falar com Especialista
           </Button>
 
