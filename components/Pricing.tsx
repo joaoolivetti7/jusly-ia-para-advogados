@@ -4,6 +4,10 @@ import Button from './Button';
 import { PRICING_PLANS } from '../constants';
 
 const Pricing: React.FC = () => {
+  const handleClickButton = (link: string) => {
+    window.open(link, '_blank');
+  }
+
   return (
     <section id="pricing" className="py-16 md:py-24 bg-dark-900 relative">
       {/* Background Splashes */}
@@ -23,8 +27,8 @@ const Pricing: React.FC = () => {
             <div
               key={index}
               className={`relative flex flex-col p-6 md:p-8 rounded-2xl border transition-all duration-300 ${plan.highlight
-                  ? 'bg-white/[0.03] border-primary-500 shadow-2xl shadow-primary-900/20 md:scale-105 z-10 my-4 md:my-0'
-                  : 'bg-black border-white/10 hover:border-white/20'
+                ? 'bg-white/[0.03] border-primary-500 shadow-2xl shadow-primary-900/20 md:scale-105 z-10 my-4 md:my-0'
+                : 'bg-black border-white/10 hover:border-white/20'
                 }`}
             >
               {plan.highlight && (
@@ -63,6 +67,7 @@ const Pricing: React.FC = () => {
               <Button
                 variant={plan.highlight ? 'primary' : 'outline'}
                 className="w-full"
+                onClick={() => handleClickButton(plan.link)}
               >
                 {plan.cta}
               </Button>

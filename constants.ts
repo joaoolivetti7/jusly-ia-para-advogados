@@ -25,7 +25,8 @@ export const PRICING_PLANS = [
       '1 Conexão de Whatsapp'
     ],
     highlight: false,
-    cta: 'Começar Agora'
+    cta: 'Começar Agora',
+    link: 'https://clkdmg.site/subscribe/juslystarter'
   },
   {
     name: 'Pro',
@@ -39,7 +40,8 @@ export const PRICING_PLANS = [
       '2 Conexões de Whatsapp'
     ],
     highlight: true,
-    cta: 'Começar Agora'
+    cta: 'Começar Agora',
+    link: 'https://clkdmg.site/subscribe/juslypro'
   },
   {
     name: 'Office',
@@ -53,7 +55,8 @@ export const PRICING_PLANS = [
       '3 Conexões de Whatsapp'
     ],
     highlight: false,
-    cta: 'Começar Agora'
+    cta: 'Começar Agora',
+    link: 'https://clkdmg.site/subscribe/juslyoffice'
   }
 ];
 
