@@ -60,11 +60,11 @@ const Features: React.FC = () => {
           <div className="order-2 relative">
             <div
               className="relative rounded-xl border border-white/10 bg-gray-900 overflow-hidden shadow-2xl cursor-pointer group"
-              onClick={() => openImage("/five-image.jpeg")}
+              onClick={() => openImage("/five-image.jpg")}
             >
               <div className="absolute inset-0 bg-gradient-to-tl from-indigo-900/20 to-transparent pointer-events-none" />
               <img
-                src="/five-image.jpeg"
+                src="/five-image.jpg"
                 alt="AI Contract Closing"
                 className="w-full h-full object-contain scale-[101%] hover:scale-[105%] transition-transform duration-500"
               />
