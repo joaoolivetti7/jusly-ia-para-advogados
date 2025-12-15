@@ -26,7 +26,7 @@ export const PRICING_PLANS = [
     ],
     highlight: false,
     cta: 'Começar Agora',
-    link: 'https://clkdmg.site/subscribe/juslystarter'
+    link: 'https://go.jusly.com.br/subscribe/juslystarter'
   },
   {
     name: 'Pro',
@@ -41,7 +41,7 @@ export const PRICING_PLANS = [
     ],
     highlight: true,
     cta: 'Começar Agora',
-    link: 'https://clkdmg.site/subscribe/juslypro'
+    link: 'https://go.jusly.com.br/subscribe/juslypro'
   },
   {
     name: 'Office',
@@ -56,7 +56,7 @@ export const PRICING_PLANS = [
     ],
     highlight: false,
     cta: 'Começar Agora',
-    link: 'https://clkdmg.site/subscribe/juslyoffice'
+    link: 'https://go.jusly.com.br/subscribe/juslyoffice'
   }
 ];
 
