@@ -2,7 +2,6 @@ import { Check, MessageSquare, BarChart3, Users, Zap, Shield, Clock } from 'luci
 
 export const NAV_LINKS = [
   { name: 'Funcionalidades', href: '#features' },
-  { name: 'Preços', href: '#pricing' },
 ];
 
 export const STATS = [

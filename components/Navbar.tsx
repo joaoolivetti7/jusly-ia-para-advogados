@@ -28,6 +28,10 @@ const Navbar: React.FC = () => {
     window.open('https://app.jusly.com.br', '_blank');
   }
 
+  const handleWppClick = () => {
+    window.open('https://wa.me/5599199999999', '_blank');
+  }
+
   const scrollToPricing = () => {
     const pricingElement = document.getElementById('pricing');
     if (pricingElement) {
@@ -72,7 +76,7 @@ const Navbar: React.FC = () => {
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button onClick={handleClickEnter} variant="ghost" size="sm">Entrar</Button>
-            <Button onClick={scrollToPricing} variant="primary" size="sm">Assinar Agora</Button>
+            <Button onClick={handleWppClick} variant="primary" size="sm">Falar com especialista</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -109,12 +113,9 @@ const Navbar: React.FC = () => {
             <Button
               variant="primary"
               className="w-full justify-center py-4 text-lg"
-              onClick={() => {
-                scrollToPricing();
-                setIsMobileMenuOpen(false);
-              }}
+              onClick={handleWppClick}
             >
-              Assinar Agora
+              Falar com especialista
             </Button>
           </div>
         </div>

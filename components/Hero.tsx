@@ -11,12 +11,16 @@ const Hero: React.FC = () => {
     }
   };
 
-  const scrollToPricing = () => {
-    const pricingElement = document.getElementById('pricing');
-    if (pricingElement) {
-      pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const handleWppClick = () => {
+    window.open('https://wa.me/5541963475301?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Jusly%20e%20gostaria%20de%20conhecer%20a%20IA%20que%20fecha%20contrato%20sozinha.', '_blank');
+  }
+
+  // const scrollToPricing = () => {
+  //   const pricingElement = document.getElementById('pricing');
+  //   if (pricingElement) {
+  //     pricingElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //   }
+  // };
 
   return (
     <section className="relative pt-28 pb-16 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -50,8 +54,8 @@ const Hero: React.FC = () => {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 md:mb-20 px-4">
-          <Button size="lg" className="w-full sm:w-auto group" onClick={scrollToPricing}>
-            Assinar Agora
+          <Button size="lg" className="w-full sm:w-auto group" onClick={handleWppClick}>
+            Falar com especialista
             <Sparkles className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
           </Button>
           <Button
@@ -115,8 +119,8 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="mt-12 md:mt-12 flex items-center justify-center w-full px-4">
-          <Button size="lg" className="w-full sm:w-auto group" onClick={scrollToPricing}>
-            Assinar Agora
+          <Button size="lg" className="w-full sm:w-auto group" onClick={handleWppClick}>
+            Falar com especialista
             <Sparkles className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform" />
           </Button>
         </div>
